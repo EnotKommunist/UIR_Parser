@@ -1,0 +1,5 @@
+<h1>База данных не создана успешно!</h1>
+<form method="POST" action="{% url 'print_db' %}">
+    {% csrf_token %}
+    <button type="submit">Перенаправить</button>
+</form>

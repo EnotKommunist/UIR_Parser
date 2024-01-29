@@ -1,0 +1,21 @@
+
+
+{% block content %}
+    <div>
+        {% for el in info %}
+            <div class="alert alert-title">
+                <h3>{{ el.brand }}</h3>
+                <p>Название - {{ el.name }}</p>
+                <p>id продавца - {{ el.id_seller }}</p>
+                <p>Цена со скидкой - {{ el.discounted_price }}</p>
+                <p>Изначальная цена - {{ el.original_price }}</p>
+                <p>Скидка - {{ el.discount_percentage }}%</p>
+                <p>Рейтинг товара - {{ el.product_rating }}</p>
+                <p>Количество отзывов - {{ el.number_of_reviews }}</p>
+                <p>Поставщик - {{ el.supplier }}</p>
+                <p>Рейтинг поставщика - {{ el.supplier_rating }}</p>
+                <p>Ссылка на товар - {{ el.link }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
