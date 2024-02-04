@@ -1,6 +1,22 @@
+<style>
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: MintCream;
+    background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1614261196_35-p-fon-chernii-granzh-71.jpg");
+  }
+  label {
+    color: white;
+  }
+</style>
+
 <form method="post" action="{% url 'parse_page' %}">
   {% csrf_token %}
-  <label for="input_string">Введите запрос:</label>
-  <input type="text" name="input_string" id="input_string">
-  <button type="submit">Submit</button>
+  <label for="input_string" style="position: relative; right: -850px; top: 325px; height: 200; width: 200">Поиск товаров на wildberries:</label>
+  <input type="text" name="input_string" id="input_string" style="position: relative; right: -600px; top: 350px; height: 20; width: 200">
+  <button type="submit" style="position: relative; right: -600px; top: 351px; height: 20; width: 100">Искать</button>
 </form>
+<body>
+</body>

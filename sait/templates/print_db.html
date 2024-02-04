@@ -1,10 +1,40 @@
+<style>
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: MintCream;
+        background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1614261196_35-p-fon-chernii-granzh-71.jpg");
+  }
+  p {
+    color: white;
+  }
+  .alert{
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+  }
+  .features{
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+  }
+  h3 {
+    color: #FFFFFF;
+  }
 
+</style>
 
 {% block content %}
-    <div>
+    <div class="features">
         {% for el in info %}
-            <div class="alert alert-title">
-                <h3>{{ el.brand }}</h3>
+            <div class="alert" style="background: #4a474a; border:5px solid #555; border-radius:5px; width: 450px; text-align:center;  margin:20px; padding:20px; box-shadow:3px 3px 30px #f00;">
+                <h3><b>{{ el.brand }}</b></h3>
                 <p>Название - {{ el.name }}</p>
                 <p>id продавца - {{ el.id_seller }}</p>
                 <p>Цена со скидкой - {{ el.discounted_price }}</p>
@@ -14,8 +44,10 @@
                 <p>Количество отзывов - {{ el.number_of_reviews }}</p>
                 <p>Поставщик - {{ el.supplier }}</p>
                 <p>Рейтинг поставщика - {{ el.supplier_rating }}</p>
-                <p>Ссылка на товар - {{ el.link }}</p>
+                <a href="{{ el.link }}">{{ el.link }}</a>
             </div>
         {% endfor %}
     </div>
 {% endblock %}
+<body>
+</body>

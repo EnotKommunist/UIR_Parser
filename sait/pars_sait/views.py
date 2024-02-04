@@ -114,6 +114,12 @@ def parse_page(request):
     if request.method == 'POST':
         input_string = request.POST.get('input_string')
         a = main(input_string)
+        a.sort(key=lambda x: x[3])
+        for i in ParsInfo.objects.all():
+            try:
+                ParsInfo.objects.get(id=i.id).delete()
+            except ParsInfo.DoesNotExist:
+                pass
         for i in range(1, len(a) + 1):
             new_pars_info = ParsInfo(id=i, brand=a[i - 1][0], name=a[i - 1][1], id_seller=a[i - 1][2],
                                      discounted_price=a[i - 1][3], original_price=a[i - 1][4],

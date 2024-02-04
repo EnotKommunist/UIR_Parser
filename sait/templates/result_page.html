@@ -1,5 +1,47 @@
-<h1>База данных не создана успешно!</h1>
-<form method="POST" action="{% url 'print_db' %}">
-    {% csrf_token %}
-    <button type="submit">Перенаправить</button>
+<style>
+  h1 {
+    color: white;
+  }
+  button:focus {
+  outline-color: transparent;
+  outline-style:solid;
+  box-shadow: 0 0 0 4px #5a01a7;
+  transition: 0.7s;
+  }
+
+  button:hover {
+    background-color:#870909;
+    transition: 0.7s;
+  }
+
+  button {
+    top:50%;
+    background-color: white;
+    color: black;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    min-height 70px;
+    min-width: 150px;
+  }
+  .img2 {
+        height: 1080;
+        width: 1920;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: MintCream;
+    background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1614261196_35-p-fon-chernii-granzh-71.jpg");
+  }
+
+}
+</style>
+<h1 style="position: relative; right: -625px; top: 300px">База данных с товарами успешно создалась!</h1>
+<form method="POST" action="{% url 'print_db' %}">{% csrf_token %}
+    <button type="submit" style="position: relative; right: -830px; top: 360px; height: 70; width: 200">Посмотреть результаты</button>
 </form>
+<body>
+</body>
